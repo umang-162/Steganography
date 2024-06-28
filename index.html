@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steganography</title>
+    <link rel="stylesheet" href="Steganography.css">    
+</head>
+<body>
+    <h2>Hide one image in another!</h2>
+    <p style="font-size: large; font-family: Helvetica, sans-serif;">
+        This website demonstrates the principle of hiding information in an image. Upload the required image. The panel on the left should display the image you want to hide and the one on the right should display the image on which it needs to be hidden. After uploading both the images click on the encode button to display the resultant image. The resultant image will be displayed on the right panel. This method of hiding information in an image is known as <b>Steganography</b>.
+    </p>
+    <div class="container">
+        <div class="canvasPackage">
+            <div id="c1">
+                <canvas id="can1"></canvas>
+            </div>
+            <div class="btnPackage">
+                <label for="tgt-file" style="align-self: center;">Upload the image to be hidden</label>
+                <div id="btn1">
+                    <input type="file" id="tgt_file" title="Image which you want to hide" accept="image/*" multiple="false">
+                </div>
+            </div>
+        </div>
+        <div class="canvasPackage">
+            <div id="c2">
+                <canvas id="can2"></canvas>
+            </div>
+            <div class="btnPackage">
+                <label for="base-file" style="align-self: center;">Upload the base image</label>
+                <div id="btn2">
+                    <input type="file" id="base_file" title="Carrier image (base image to hide your target)" accept="image/*" multiple="false">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="btn3">
+        <input type="button" value="Encode" onclick="encode()">
+    </div>
+    <button id="btn6">
+        <input type="button" value="Reset" onclick="reset1()">
+    </button>
+    <p style="font-size: large; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        After encoding an image you can download it and the use the decode feature below to unveil the information back again. Upload the modified image. After uploading it should be visible on the bottom left panel. Click on the decode button to extract the information. The hidden image should be visible in the right pane.
+    </p>
+
+    <div class="container">
+        <div class="canvasPackage">
+            <div id="c3">
+                <canvas id="can3"></canvas>
+            </div>
+            <div id="btn5" class="btnPackage">
+                Upload the image
+                <input type="file" id="input_img" accept="image/*" multiple="false" onchange="loadEncodedImage()">
+            </div>
+        </div>
+        <div class="canvasPackage">
+            <div id="c4">
+                <canvas id="can4"></canvas>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div id="btn4">
+            <input type="button" value="Decode" onclick="decode()">
+        </div>
+        <div id="btn7">
+            <input type="button" value="Reset" onclick="reset2()">
+        </div>
+    </div>
+</body>
+<script src="Steganography.js"></script>
+<script src="https://www.dukelearntoprogram.com//course1/common/js/image/SimpleImage.js"></script>
+</html>

@@ -1,0 +1,40 @@
+#can1, #can2, #can3, #can4 {
+    height: 100%;
+    width: 100%;
+    border: 1px solid cyan;
+    background-color: black;
+}
+.container {
+    justify-content: space-around;
+    display: flex;
+    gap: 20px;
+}
+.btnPackage {
+    display: flex;
+}
+.canvasPackage {
+    display: flex;
+    flex-direction: column;
+}
+#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7 {
+    display: inline-block;
+    padding: 0.7em 1.7em;
+    margin: 3px;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    color: #ffff;
+    background-color: #3369ff;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align: center;
+    position: relative;
+}
+h2 {
+    text-align: center;
+}
+body {
+    /* background-color: rgba(0, 123, 255, 0.422); */
+    background-color: #1c1c1c;
+    color: white;
+}
